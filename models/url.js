@@ -16,7 +16,9 @@ const urlSchema = new mongoose.Schema({
                 timezone: { type: String }
             }
         }
-    ]
+    ],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'users' },
+    qrCode: { type: String }
 },
 {
     timestamps: true
